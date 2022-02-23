@@ -12,7 +12,7 @@ const createImage = async (resizedImageparams: IResizedImageParams): Promise<nul
   try {
     await sharp(resizedImageparams.src)
       .resize(resizedImageparams.width, resizedImageparams.height)
-      .toFormat('jpg')
+      .toFormat('jpeg')
       .toFile(resizedImageparams.output);
 
     return null;
